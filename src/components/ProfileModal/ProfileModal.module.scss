@@ -1,0 +1,19 @@
+@import "styles/variables.scss";
+
+.modalContainer {
+    position: absolute;
+    min-height: fit-content;
+    height: max-content;
+    padding: 30px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: $bg-white;
+    border: 1.5px solid rgb(235, 240, 245);
+    margin-top: 17px;
+    cursor: default;
+    min-width: 200px;
+    width: 193px;
+    left: -1%;
+    top: 95%;
+    z-index: 200;
+}

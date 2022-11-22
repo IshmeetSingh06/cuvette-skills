@@ -1,0 +1,102 @@
+@import "styles/variables.scss";
+
+.header {
+    background-color: $bg-white;
+    top: 0;
+    width: 100%;
+    border-bottom: 1px solid $bg-grey;
+    padding: 0.75rem 2.5rem;
+    margin: 0;
+}
+
+.headerContainer {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .headerLeft {
+        display: flex;
+        gap: 3.438rem;
+        align-items: center;
+
+        .cuvetteLogo {
+            display: flex;
+            gap: 0.6em;
+        }
+    }
+
+    .headerRight {
+        .menuList {
+            display: flex;
+            align-items: center;
+            gap: 1.875rem;
+
+            .menuListItem {
+                display: flex;
+                align-items: center;
+
+                a {
+                    color: $text-secondary;
+                    font-weight: 400;
+                }
+
+                .notificationIcon {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 2.75em;
+                    background-color: $bg-white;
+                    padding-bottom: 0.5em;
+                    padding-top: 0.5rem;
+                    border: 1px solid $bg-grey;
+                    border-radius: 0.5em;
+                    cursor: pointer;
+                }
+
+                .userDropdown {
+                    display: flex;
+                    align-items: center;
+                    padding: 0.6em;
+                    outline: none;
+                    gap: 0.9em;
+                    background-color: $bg-white;
+                    border: 1.5px solid $bg-grey;
+                    border-radius: 0.5em;
+                    position: relative;
+                    min-width: 140px;
+                    position: relative;
+                    cursor: pointer;
+
+                    .userImage {
+                        width: 1.5em;
+                        height: 1.5em;
+                        border-radius: 50%;
+                    }
+
+                    .userName {
+                        font-weight: 700;
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+
+            .feedbackOption {
+                margin-right: 2px;
+                position: relative;
+            }
+        }
+    }
+}
+.notificationIcon {
+    position: relative;
+}
+@media only screen and (max-width: 770px) {
+    .header {
+        padding: 10px 20px;
+        position: sticky;
+        top: 0;
+        z-index: 250;
+    }
+}

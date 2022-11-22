@@ -1,0 +1,32 @@
+@import "./variables";
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: $primary-font;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color: $bg-white;
+    font-family: $primary-font;
+    height: 100vh;
+    overflow-x: hidden;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+button {
+    cursor: pointer;
+}
+
+.CircularProgressbar {
+    width: 100%;
+    vertical-align: middle;
+}

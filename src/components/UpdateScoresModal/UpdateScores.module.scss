@@ -1,0 +1,150 @@
+@import "styles/variables.scss";
+
+.modalContainer {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(30, 39, 46, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.modal {
+    border-radius: 10px;
+    width: 88%;
+    max-width: 768px;
+    height: 60vh;
+    background-color: $bg-white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 2em 2em;
+    justify-content: space-evenly;
+}
+
+.modalTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $bg-grey;
+    padding-bottom: 1em;
+
+    .titleText {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 47px;
+        letter-spacing: -0.02em;
+        color: $text-blue-dark;
+    }
+    img {
+        height: 50px;
+        width: 40px;
+    }
+}
+
+.modalMiddle {
+    width: 100%;
+    padding-bottom: 1em;
+    border-bottom: 1px solid $bg-grey;
+    ul {
+        counter-reset: li;
+        list-style-type: none;
+        font-size: 14px;
+        line-height: 18px;
+        li:not(:last-child) {
+            margin-bottom: 1.5em;
+        }
+        li {
+            position: relative;
+            padding-left: 3em;
+            padding-top: 0.4em;
+            &:before {
+                content: counter(li);
+                counter-increment: li;
+                height: 30px;
+                width: 30px;
+                display: flex;
+                background-color: #142683;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                color: $bg-white;
+                text-align: center;
+                position: absolute;
+                left: 0;
+                top: 13px;
+            }
+        }
+    }
+
+    .listItem {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .listItemText {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 156%;
+            color: $text-secondary;
+            span {
+                font-weight: 700;
+            }
+        }
+
+        input {
+            outline: none;
+            border: 2px solid $bg-primary;
+            color: $bg-primary;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 1em;
+            line-height: 28px;
+            border-radius: 5px;
+            width: 20%;
+            padding: 0.5em 1em;
+        }
+    }
+}
+
+.modalBottom {
+    display: flex;
+    padding-top: 1em;
+    justify-self: flex-end;
+    justify-content: flex-end;
+    gap: 2em;
+
+    .cancelButton,
+    .saveButton {
+        outline: none;
+        border-radius: 5px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1em;
+        line-height: 28px;
+        letter-spacing: -0.02em;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        padding: 0.5em 1em;
+    }
+    .saveButton {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        background-color: $bg-primary;
+        color: $bg-white;
+    }
+
+    .cancelButton {
+        border: 2px solid $bg-primary;
+        color: $bg-primary;
+        background-color: $bg-white;
+    }
+}
