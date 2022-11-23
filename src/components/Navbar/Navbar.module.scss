@@ -90,8 +90,8 @@
         }
 
         .menuListMobile {
-            gap: 8px !important;
-            height: 38px;
+            gap: 0.5rem !important;
+            height: 1.5rem;
             display: none;
             .menuListItem {
                 display: flex;
@@ -105,7 +105,7 @@
 }
 @media only screen and (max-width: 770px) {
     .header {
-        padding: 10px 20px;
+        padding: 0.625rem 1.2rem;
         position: sticky;
         top: 0;
         z-index: 250;
