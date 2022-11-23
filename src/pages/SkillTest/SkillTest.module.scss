@@ -417,6 +417,12 @@
 
         .middleContainer {
             padding: 1.5em 1.5em;
+
+            .skillUpdateBlock {
+                display: flex;
+                flex-direction: column;
+                gap: 0.6em;
+            }
         }
 
         .skillTestRight {
