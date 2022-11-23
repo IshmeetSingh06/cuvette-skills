@@ -193,15 +193,6 @@
     padding: 2em 2em;
     border-radius: 10px;
 
-    .quickText {
-        font-style: normal;
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 28px;
-        color: $text-primary;
-        letter-spacing: -0.02em;
-    }
-
     .statsBlock {
         display: flex;
         flex-direction: row;
@@ -420,21 +411,30 @@
 @media only screen and (max-width: 960px) {
     .skillTestContainer,
     .skillTestMiddle {
-        max-width: 100%;
-    }
-    .skillTestLeft,
-    .skillTestRight {
-        display: none;
-    }
-}
+        width: 100% !important;
+        max-width: 100% !important;
+        flex-direction: column;
 
-@media only screen and (max-width: 1344px) {
-    .skillTestContainer,
-    .skillTestMiddle {
-        max-width: calc(100% - 660px);
+        .middleContainer {
+            padding: 1.5em 1.5em;
+        }
+
+        .skillTestRight {
+            width: 100% !important;
+            max-width: 100% !important;
+            padding: 1.5em 1.5em;
+        }
     }
-    .skillTestLeft,
-    .skillTestRight {
+    .skillTestLeft {
         display: none;
+    }
+
+    .skillStatistics {
+        .statsBlock {
+            display: flex;
+            gap: 1em;
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
 }

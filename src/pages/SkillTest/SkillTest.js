@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-// import PropTypes from "prop-types";
 import "react-circular-progressbar/dist/styles.css";
+
+import Graph from "components/Graph/Graph";
+import DonutChart from "components/DonutChart/DonutChart";
+import UpdateScores from "components/UpdateScoresModal/UpdateScores";
+
 import html from "assets/images/html.png";
 import rankImage from "assets/images/yourRank.png";
 import percentileImage from "assets/images/percentile.png";
@@ -14,10 +18,6 @@ import { ReactComponent as MessagesIcon } from "assets/icons/messagesIcon.svg";
 import { ReactComponent as SkillTestIcon } from "assets/icons/skillTestIcon.svg";
 
 import styles from "./SkillTest.module.scss";
-
-import UpdateScores from "components/UpdateScoresModal/UpdateScores";
-import Graph from "components/Graph/Graph";
-import DonutChart from "components/DonutChart/DonutChart";
 
 function SkillTest() {
     const [active, setActive] = useState("Skill Test");

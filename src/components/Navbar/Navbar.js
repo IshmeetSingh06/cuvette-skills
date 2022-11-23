@@ -23,7 +23,7 @@ function Navbar() {
                     </Link>
                 </div>
                 <div className={styles.headerRight}>
-                    <ul className={styles.menuList}>
+                    <ul className={styles.menuListWeb}>
                         <li
                             className={`${styles.menuListItem} ${styles.feedbackOption}`}
                         >
@@ -34,7 +34,6 @@ function Navbar() {
                         <li className={styles.menuListItem}>
                             <div className={styles.notificationIcon}>
                                 <NotificationIcon />
-                                <span className=""></span>
                             </div>
                         </li>
                         <li className={styles.menuListItem}>
@@ -60,6 +59,26 @@ function Navbar() {
                                     />
                                 )}
                                 {modalOpen ? <ProfileModal /> : null}
+                            </div>
+                        </li>
+                    </ul>
+                    <ul className={styles.menuListMobile}>
+                        <li className={styles.menuListItem}>
+                            <div className={styles.notificationIcon}>
+                                <NotificationIcon />
+                                <span className=""></span>
+                            </div>
+                        </li>
+                        <li className={styles.menuListItem}>
+                            <div
+                                id="userProfileDropDown"
+                                className={styles.userDropdown}
+                            >
+                                <img
+                                    className={styles.userImage}
+                                    src={userImage}
+                                    alt="userProfileIcon"
+                                />
                             </div>
                         </li>
                     </ul>

@@ -4,16 +4,30 @@
     position: absolute;
     min-height: fit-content;
     height: max-content;
-    padding: 30px;
+    padding: 1em;
     text-align: center;
     border-radius: 8px;
     background-color: $bg-white;
     border: 1.5px solid rgb(235, 240, 245);
-    margin-top: 17px;
+    margin-top: 1em;
     cursor: default;
     min-width: 200px;
-    width: 193px;
+    width: 20vh;
     left: -1%;
     top: 95%;
     z-index: 200;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.settingItem {
+    width: 100%;
+    text-align: start;
+    transition: 0.1s;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    grid-gap: 5px;
+    gap: 5px;
 }

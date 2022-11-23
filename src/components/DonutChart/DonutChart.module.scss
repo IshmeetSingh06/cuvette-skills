@@ -1,6 +1,7 @@
 @import "styles/variables.scss";
 .donutChart {
-    width: 100%;
+    width: 60%;
+    align-self: center;
 }
 .CircularProgressbar {
     width: 100%;
@@ -42,4 +43,11 @@
 
 .CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-trail {
     stroke: transparent;
+}
+
+@media only screen and (max-width: 770px) {
+    .donutChart {
+        width: 40%;
+        align-self: center;
+    }
 }

@@ -27,7 +27,8 @@
     }
 
     .headerRight {
-        .menuList {
+        .menuListWeb,
+        .menuListMobile {
             display: flex;
             align-items: center;
             gap: 1.875rem;
@@ -87,6 +88,16 @@
                 position: relative;
             }
         }
+
+        .menuListMobile {
+            gap: 8px !important;
+            height: 38px;
+            display: none;
+            .menuListItem {
+                display: flex;
+                align-items: center;
+            }
+        }
     }
 }
 .notificationIcon {
@@ -98,5 +109,18 @@
         position: sticky;
         top: 0;
         z-index: 250;
+    }
+    .headerContainer {
+        .menuListWeb {
+            display: none !important;
+        }
+        .menuListMobile {
+            display: flex !important;
+        }
+
+        .userDropdown {
+            min-width: 50px !important;
+            border: none !important;
+        }
     }
 }
